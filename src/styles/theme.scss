@@ -1,0 +1,264 @@
+/* Tema base do TCC - importe este arquivo em App.scss */
+$primary: #0b6b4f; /* exemplo: verde SoilSense */
+$accent:  #f5a623;
+$bg:      #f8faf9;
+$text:    #263238;
+$muted:   #6b7280;
+
+:root {
+  --color-primary: #0b6b4f;
+  --color-accent: #f5a623;
+  --color-bg: #f8faf9;
+  --color-text: #263238;
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+/* Tipografia */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Helpers */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn.primary { background: var(--color-primary); color: #fff; }
+.btn.outline { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+.btn.link { background: transparent; color: var(--color-text); border: none; }
+
+/* Cards e layout básico (expanda conforme App.scss existente) */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(12, 20, 30, 0.06);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+  --verde-primario: #2E7D32;
+  --verde-claro: #81C784;
+  --marrom-terroso: #8D6E63;
+  --bege-claro: #F5F5DC;
+  --texto-escuro: #333333;
+  --verde-escuro-hover: #235a26;
+  --radio-botoes: 28px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Roboto", sans-serif;
+  background: var(--bege-claro);
+  color: var(--texto-escuro);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Tipografia */
+h1,h2,h3,h4,h5{
+  font-family: "Poppins", sans-serif;
+  color: var(--texto-escuro);
+  margin:0 0 0.75rem 0;
+  line-height:1.2;
+}
+p,li,a,span{ font-family: "Roboto", sans-serif; color:var(--texto-escuro); }
+
+/* Container */
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+/* Cabeçalho fixo */
+header, .fixed-top{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background: var(--verde-primario);
+  color:#fff;
+  z-index:1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+header .container, .fixed-top .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.75rem 1rem;
+}
+header a, .fixed-top a{
+  color: #fff;
+  text-decoration:none;
+}
+nav a{
+  color: #fff;
+  margin-left:1rem;
+  font-weight:500;
+}
+nav a:hover{ opacity:0.95; transform: translateY(-1px); }
+
+/* Hero / Banner */
+.hero{
+  padding:120px 0 60px; /* espaço para header fixo */
+  text-align:center;
+  background: transparent;
+}
+.hero h1{
+  font-size:2.25rem;
+  margin-bottom:0.5rem;
+  color:var(--verde-primario);
+}
+.hero p{
+  font-size:1.125rem;
+  color:var(--texto-escuro);
+  margin-bottom:1.25rem;
+}
+
+/* Botões */
+.btn{
+  display:inline-block;
+  padding:0.6rem 1.1rem;
+  border-radius: var(--radio-botoes);
+  font-weight:600;
+  text-decoration:none;
+  transition:all .18s ease;
+  cursor:pointer;
+  border:0;
+}
+.btn-primary{
+  background: var(--verde-primario);
+  color:#fff;
+  box-shadow: 0 4px 10px rgba(46,125,50,0.12);
+}
+.btn-primary:hover, .btn-primary:focus{
+  background: var(--verde-escuro-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Seções */
+section{
+  padding:3rem 0;
+}
+section h2{
+  font-size:1.6rem;
+  color: var(--verde-primario);
+  margin-bottom:1rem;
+}
+section p, section ul{ font-size:1rem; line-height:1.6; color:var(--texto-escuro); }
+
+/* Lists estilizadas */
+ul{ padding-left:1.2rem; margin:0; }
+ul li{
+  margin-bottom:0.6rem;
+  padding-left:0.4rem;
+  position:relative;
+}
+ul li::before{
+  content:'';
+  width:8px;
+  height:8px;
+  background:var(--verde-claro);
+  border-radius:50%;
+  position:absolute;
+  left:-1.2rem;
+  top:0.7rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+/* Imagens */
+.img-fluid{ max-width:100%; height:auto; display:block; border-radius:8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+
+/* Específicas (mantém classes existentes) */
+.about-img, .service-img, .benefits-img, .contact-img{
+  max-width:100%;
+  height:auto;
+  border-radius:8px;
+  display:block;
+}
+
+/* Cards / Boxes */
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* Rodapé */
+footer{
+  background: var(--marrom-terroso);
+  color: #F5F5DC;
+  padding:1.25rem 0;
+  margin-top:2rem;
+}
+footer a{ color: rgba(245,245,220,0.95); text-decoration:none; }
+footer p{ margin:0; }
+
+/* Ícones minimalistas */
+.icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  background: rgba(46,125,50,0.08);
+  color: var(--verde-primario);
+  font-size:18px;
+  margin-right:0.6rem;
+}
+
+/* Formulários */
+input, textarea, select{
+  width:100%;
+  padding:0.75rem;
+  border-radius:8px;
+  border:1px solid #e6e6e6;
+  background:#fff;
+  font-family:inherit;
+  color:var(--texto-escuro);
+}
+input:focus, textarea:focus, select:focus{
+  outline:none;
+  box-shadow: 0 6px 18px rgba(46,125,50,0.08);
+  border-color:var(--verde-claro);
+}
+
+/* Responsividade */
+@media (max-width:768px){
+  .hero h1{ font-size:1.6rem; }
+  header .container{ flex-direction:row; gap:0.5rem; }
+  nav a{ margin-left:0.6rem; font-size:0.95rem; }
+}
+
+/* Acessibilidade (contraste) */
+a.btn-primary:focus{
+  outline:3px solid rgba(46,125,50,0.16);
+  outline-offset:2px;
+}
+
+/* Pequenas melhorias visuais sem alterar estrutura */
+a.logo, .site-title{ color:#fff; font-weight:700; text-decoration:none; }
